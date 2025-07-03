@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rai Departmental Store</title>
+    <meta name="description" content="Rai Departmental Store – A friendly neighbourhood shop offering cosmetics, stationery, daily‑needs, toys, plasticware, snacks & more at fair prices."/>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root{
+            --bg:#ffffff;
+            --bg-light:#f4f4f4;
+            --text:#1e1e1e;
+            --muted:#666;
+            --accent:#000000;
+        }
+
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Poppins',sans-serif;line-height:1.6;background:var(--bg);color:var(--text);scroll-behavior:smooth;}
+        img{display:block;width:100%;}
+        a{text-decoration:none;color:inherit;}
+
+        header{position:sticky;top:0;z-index:100;background:var(--bg);box-shadow:0 2px 6px rgba(0,0,0,.1);} 
+        .container{max-width:1200px;margin:auto;padding:0 1.5rem;}
+        .nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;}
+        .logo{font-size:1.6rem;font-weight:700;letter-spacing:.5px;color:var(--accent);} 
+        .nav-links a{margin-left:1.5rem;font-weight:500;color:var(--text);position:relative;}
+        .nav-links a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--accent);transition:.3s;}
+        .nav-links a:hover::after{width:100%;}
+
+        .hero{background:url('https://source.unsplash.com/1600x800/?grocery,store,shopfront') center/cover no-repeat;min-height:75vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem;}
+        .hero h1{font-size:3rem;color:var(--accent);text-shadow:none;}
+        .hero p{max-width:700px;margin-top:1rem;font-size:1.1rem;color:var(--text);text-shadow:none;} 
+        .btn{display:inline-block;margin-top:2rem;background:var(--accent);color:#fff;padding:.8rem 1.8rem;border-radius:6px;font-weight:600;transition:background .2s;} 
+        .btn:hover{background:#333;}
+
+        section{padding:4rem 1.5rem;}
+        section h2{text-align:center;font-size:2.2rem;margin-bottom:2rem;color:var(--accent);} 
+
+        .about p{max-width:900px;margin:0 auto 1.25rem auto;text-align:center;color:var(--text);font-size:1.05rem;}
+
+        .grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+        .card{background:var(--bg-light);border-radius:10px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.1);transition:transform .25s;} 
+        .card:hover{transform:translateY(-6px);} 
+        .card h3{padding:1rem;color:var(--text);font-size:1.15rem;text-align:center;}
+
+        .contact-list{list-style:none;max-width:600px;margin:0 auto;text-align:center;}
+        .contact-list li{margin-bottom:.8rem;font-size:1rem;}
+        .contact-list span{color:var(--muted);} 
+
+        footer{background:#f1f1f1;text-align:center;padding:1rem 0;color:var(--muted);} 
+        footer a{color:var(--accent);} 
+
+        @media (max-width:500px){
+            .hero h1{font-size:2.3rem;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <div class="logo">Rai Departmental Store</div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#products">Products</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Your Friendly Neighbourhood Shop</h1>
+        <p>Serving Jhansi since 2021 with cosmetics, stationery, snacks, toys, daily necessities &amp; more – all at honest prices.</p>
+        <a href="#products" class="btn">Browse Products</a>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about">
+            <p>Established four years ago, Rai Departmental Store is your go-to place for everything from daily essentials to thoughtful gifts. We believe shopping should be easy, friendly, and full of options. Whether you’re a student, a homemaker, or just stopping by, we’ve got what you need — always at fair prices.</p>
+            <p>We sell a wide variety of items including:</p>
+            <p><strong>Cosmetics:</strong> Lipsticks, nail polish, makeup products</p>
+            <p><strong>Stationery:</strong> Files, documents, school supplies</p>
+            <p><strong>Lunch Gear:</strong> Tiffin boxes, bottles, water bottles</p>
+            <p><strong>Food & Snacks:</strong> Cold drinks, chocolates (Dairy Milk, 5 Star, etc.)</p>
+            <p><strong>Daily Necessities:</strong> Underwear, socks, gloves, caps</p>
+            <p><strong>Household:</strong> Showpieces, plastic items (mugs, buckets, dustbins)</p>
+            <p><strong>Other:</strong> Toys, birthday items, jewellery items, and more!</p>
+            <p>We’re family-friendly, community-driven, and here to serve you with a smile 😊</p>
+        </div>
+    </section>
+
+    <section id="products">
+        <h2>What We Stock</h2>
+        <div class="grid">
+            <div class="card"><img src="https://source.unsplash.com/600x400/?cosmetics,makeup" alt="Cosmetics"><h3>Cosmetics & Makeup</h3></div>
+            <div class="card"><img src="https://source.unsplash.com/600x400/?stationery,school" alt="Stationery"><h3>Stationery & School Supplies</h3></div>
+            <div class="card"><img src="https://source.unsplash.com/600x400/?tiffin,waterbottle" alt="Tiffin & Bottles"><h3>Lunch Boxes & Bottles</h3></div>
+            <div class="card"><img src="https://source.unsplash.com/600x400/?chocolates,snacks" alt="Chocolates"><h3>Chocolates & Cold Drinks</h3></div>
+            <div class="card"><img src="https://source.unsplash.com/600x400/?clothes,socks" alt="Apparel"><h3>Socks, Gloves & Underwear</h3></div>
+            <div class="card"><img src="https://source.unsplash.com/600x400/?toys,kids" alt="Toys"><h3>Toys & Birthday Items</h3></div>
+            <div class="card"><img src="https://source.unsplash.com/600x400/?bucket,dustbin" alt="Plasticware"><h3>Plastic Household Items</h3></div>
+            <div class="card"><img src="https://source.unsplash.com/600x400/?jewelry,showpiece" alt="Jewellery"><h3>Jewellery & Showpieces</h3></div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <ul class="contact-list">
+            <li><span>Phone:</span> 99366‑11551&nbsp;|&nbsp;93690‑57727</li>
+            <li><span>Email:</span> <a href="mailto:raim261984@gmail.com">raim261984@gmail.com</a></li>
+            <li><span>Address:</span> Panchvati Colony, near Pani ki Tanki, Jhansi</li>
+            <li><span>Hours:</span> 10 a.m. – 9 p.m. (Mon–Sat)</li>
+            <li><span>Closed on:</span> Sundays</li>
+        </ul>
+    </section>
+
+    <footer>
+        &copy; 2025 Rai Departmental Store • Crafted with ❤️ • <a href="#home">Back to top</a>
+    </footer>
+</body>
+</html>
